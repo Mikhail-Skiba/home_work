@@ -1,76 +1,146 @@
-var x; //Оголосив
-x = "Hello World"; //Присвоїв
-var x = "Hello World";
-let z; //Оголосив
-z = "Hello Friends"; //Присвоїв
-let z = "Hello Friends"; //(Стрінг)
-const m = "Hello World";
-var name = "Misha"; //Оголосив змінну ,якій можна міняти значення
-name = "Mikhail";
-var name = "Misha",
-  age = 30,
-  sex = "male"; // Можна і в один ряд записувати все через кому,але як ти казав і це лоічно,що в великих проектах це буде бардак(не читабельно)
-const surname = "Skiba"; //Ти кажеш,що в 4-тій було,що конст не можливо було перезаписати,якщо я правильно зрозумів
-let name = "Misha"; //Змінна оголошена і має значення
-let age = null; // і змінна яка не відома
-//Строка(string) в JavaScript має бути в кавичках.
-let str = "Hello"; // як ти і пояснював ,або двойні або одинарні
-let n = 123;
-n = 12.345; //Числовой тип данных (number) представляє цілісне значення, так і числа з плаваючою крапкою.
-let x;
-alert(x); //Змінна оголошена,але тут ми не присвоїли їй ніякого значення,то її значенням буде undefined
-let x = 777;
-x = undefined;
-alert(x); //"undefined"//Але так робити не рекомендують,зазвичай використовують null для присвоєння перемінній пустого або невідомого значення
-let user = new Student(); //або з такими дужками{}
-let user = {
-  name: "Misha",
-  age: 30,
-  surname: "Skiba",
-  sex: "male",
-  country: "Ukraine",
-};
-// Коротко,на рахунок кавичок,ти сказав ,що  одинарні прийнято писати тут
-'Hello World'// стрінга
-777//чисто намбер
-true// буліан
-false//
-let obj = {}//обєкт
-let arr = []//масив
-let func = function{ }()//функція
-//Називати змінну не можна зарезирвованим словом(але в написанні коду,воно автоматично підскаже це)
-var Str = 'Hello Man!'; //Стрінг
-console.log(typeof Str);  // string
-var x = 30;  // number
-var y = 7.77;
-console.log(x + y); // 37,77
-console.log(typeof y);  // number
-typeof x
-var isCooking = true;   // Boolean Data Type
-var isSweeming = false;
-console.log(typeof isCooking);  // Boolean
-var person = {
-    name: 'Misha',
-    age: 30,
-    surname: 'Skiba',
-};//Object
-var person = ['Misha', 'Skiba', 30];//Array
-function sayHi() {
-    alert("Hi, My name is Misha!");
+let age = 30;
+age = String(age);
+typeof age;
+console.log(typeof age); //1
+
+let age = 30;
+age = Boolean(age);
+typeof age;
+console.log(typeof age); //2
+
+let age = 30;
+age = Null();
+typeof age;
+console.log(typeof age); //3
+
+let name = "Misha";
+name = Number(name);
+typeof name;
+console.log(typeof name); //4
+
+let name = "Misha";
+undefined;
+name = Boolean("name");
+true;
+typeof name;
+("boolean");
+console.log(typeof name);
+boolean;
+undefined; //5
+
+let name = "Misha";
+undefined;
+name = null;
+null;
+typeof name;
+("object");
+console.log(typeof name);
+object;
+undefined; //6
+
+let name = true;
+undefined;
+name = String(name);
+("true");
+typeof name;
+("string");
+console.log(typeof name);
+string;
+undefined; //7
+
+let name = true;
+undefined;
+name = Number(name);
+1;
+typeof name;
+("number");
+console.log(typeof name);
+number;
+undefined; //8
+
+let name = true;
+undefined;
+name = null;
+null;
+typeof name;
+("object");
+console.log(typeof name);
+object;
+undefined; //9
+
+let name = null;
+undefined;
+name = String(name);
+("null");
+typeof name;
+("string");
+console.log(typeof name);
+string;
+undefined; //10
+
+let age = null;
+undefined;
+age = Number(null);
+0;
+typeof age;
+("number");
+console.log(typeof age);
+number;
+undefined; //11
+
+let age = null;
+undefined;
+age = Boolean(age);
+false;
+typeof age;
+("boolean");
+console.log(typeof age);
+boolean;
+undefined; //12
+
+function getName() {}
+function getName() {
+  return;
 }
-var greeting = function () {
-    return "Hi Friend!";
+let getName = function () {}; //13 ще є if,else
+
+function showName() {
+  alert("Misha");
+} //14
+
+function getName() {
+  return "Misha";
 }
-alert(typeof greeting) //Function
-var x;
-var y = 'Hello Friends!'
-alert(x)//Undefined
-var x = null;
-alert(x); // null
-var person = {
-    name: "Misha",
-    age: 30,
-    surname: "Skiba",
-    sex: "male",
-    country: "Ukraine",
+undefined;
+getName();
+("Misha"); //15
+
+let Name = function (arg1) {
+  return arg1;
 };
+undefined;
+let Name = "Misha";
+Name("Misha");
+("Misha"); //16
+
+let sum = function (arg1, arg2) {
+  return arg1 + arg2;
+};
+undefined;
+sum(17, 13);
+30;
+let a = 17;
+let b = 13;
+sum(a, b); //17
+
+let sum = function (arg1, arg2, arg3) {
+  return arg1 + arg2 + arg3;
+};
+undefined;
+sum(25, 15, 10);
+50;
+let a = 25;
+let b = 15;
+let c = 10;
+sum(a, b, c);
+//18
