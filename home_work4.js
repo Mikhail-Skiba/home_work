@@ -1,12 +1,12 @@
 // 1. Виведіть користувачу попап використовуючи функцію "alert" який містить довільне повідомлення.
 alert("message");
 undefined;
-alert("What is you name");
+alert("What is your name");
 undefined; //спробував якщо написати шось інше,до прикладу
 
 // 2. Виведіть користувачу попап використовуючи функцію "prompt" який містить довільне питання і не має дефолтного значення. Результат присвойте у змінну.
 // *Виведіть змінну в консоль за допомогою "console.log"
-let name = prompt("What is you name?");
+let name = prompt("What is your name?");
 undefined;
 name;
 ("Misha");
